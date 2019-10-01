@@ -1,0 +1,19 @@
+model inhibitor_irrev_mechanistic()
+  substrate_binding: E+S -> ES; kbf*E*S - kbr*ES
+  inhibitor_binding: E+I -> EI; kif*E*I - kir*EI
+  v: ES => E+P; kcat*ES
+
+  kcat = 1
+
+  Km = 10
+  kbf = 100
+  kbr = kbf*Km
+
+  KI = 5
+  kif = 100
+  kir = kif*KI
+
+  E = 1
+  S = 10
+  I = 0
+end

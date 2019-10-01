@@ -1,0 +1,5 @@
+model fig_3_5c_dissociation()
+  J0: A -> B + C; k*A-k*B*C
+  A = 1
+  k = 1
+end

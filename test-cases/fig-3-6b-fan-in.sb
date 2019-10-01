@@ -1,0 +1,8 @@
+model fig_3_6b_fan_in()
+  J0:   => A; k
+  J1:   => B; k
+  J2: A -> C; k*A
+  J3: B -> C; k*B
+  J4: C ->  ; k*C
+  k = 1
+end

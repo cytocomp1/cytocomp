@@ -1,0 +1,18 @@
+model fan_in()
+  J0:   => S; kA
+  J1:   => T; kB
+  J2: S -> U; kf1*S - kr1*U
+  J3: T -> U; kf2*T - kr2*U
+  J4: U ->  ; kd*U
+
+  kA = 10
+  kB = 10
+
+  kf1 = 5
+  kr1 = 2
+
+  kf2 = 6
+  kr2 = 3
+
+  kd = 1
+end

@@ -1,0 +1,29 @@
+model inhibitor_irrev()
+  var species E,S,P,I
+  v: E+S => E+P; Vf*E*((S-P/Keq)/Ks)/(1 + S/Ks + P/Kp + I/KI)
+
+  rho = 1
+  kcatf = 2*rho
+  kcatr = 1*rho
+
+  Ks = 10
+  kbr = rho
+  kbf = kbr*Ks
+
+  Kp = kcatr/kcatf
+  kpr = rho
+  kpf = kpr*Kp
+
+  // Haldane relation
+  Vf = kcatf*kbf*Ks
+  Vr = kcatr*kbr*Kp
+  Keq = (Vf/Vr)*(Kp/Ks)
+
+  KI = 5
+  kir = rho
+  kif = kir*KI
+
+  E = 1
+  S = 10
+  I = 500
+end

@@ -1,0 +1,1105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
+  <model>
+    <listOfCompartments>
+      <compartment constant="true" id="comp1" size="1"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species boundaryCondition="false" compartment="comp1" constant="false" hasOnlySubstanceUnits="false" id="E"/>
+      <species boundaryCondition="false" compartment="comp1" constant="false" hasOnlySubstanceUnits="false" id="S"/>
+      <species boundaryCondition="false" compartment="comp1" constant="false" hasOnlySubstanceUnits="false" id="I"/>
+      <species boundaryCondition="false" compartment="comp1" constant="false" hasOnlySubstanceUnits="false" id="EI"/>
+      <species boundaryCondition="false" compartment="comp1" constant="false" hasOnlySubstanceUnits="false" id="ES"/>
+      <species boundaryCondition="false" compartment="comp1" constant="false" hasOnlySubstanceUnits="false" id="P"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter constant="false" id="block0_Atot" value="1"/>
+      <parameter constant="false" id="block0_Btot" value="10"/>
+      <parameter constant="false" id="block0_Ctot_in" value="0"/>
+      <parameter constant="false" id="block0_Cprod" value="0"/>
+      <parameter constant="false" id="block0_Cdeg" value="0"/>
+      <parameter constant="false" id="block0_Cfree" value="0"/>
+      <parameter constant="false" id="block0_Dfree" value="1"/>
+      <parameter constant="true" id="block0_A_FB_EN_sw" value="1"/>
+      <parameter constant="true" id="block0_FF_EN_sw1" value="0"/>
+      <parameter constant="true" id="block0_FF_EN_sw2" value="1"/>
+      <parameter constant="true" id="block0_FF_EN_sw3" value="1"/>
+      <parameter constant="true" id="block0_FF_EN_sw4" value="0"/>
+      <parameter constant="true" id="block0_B_FB_EN_sw" value="1"/>
+      <parameter constant="true" id="block0_Ctot_sw" value="0"/>
+      <parameter constant="true" id="block0_Ctot_sw_not" value="1"/>
+      <parameter constant="true" id="block0_n" value="1"/>
+      <parameter constant="true" id="block0_KDfw" value="0.1"/>
+      <parameter constant="true" id="block0_KDrv" value="0.01"/>
+      <parameter constant="true" id="block0_kr" value="1"/>
+      <parameter constant="true" id="block0_ratC" value="0"/>
+      <parameter constant="true" id="block0_kdeg" value="1"/>
+      <parameter constant="false" id="block0_Afree" value="0"/>
+      <parameter constant="false" id="block0_Bfree" value="0"/>
+      <parameter constant="false" id="block0_rate_fw" value="0"/>
+      <parameter constant="false" id="block0_fw_up" value="0"/>
+      <parameter constant="false" id="block0_fw_tot" value="0"/>
+      <parameter constant="false" id="block0_Cfree_out" value="0"/>
+      <parameter constant="false" id="block0_Dfree_out" value="0"/>
+      <parameter constant="false" id="block0_rate_rv" value="0"/>
+      <parameter constant="false" id="block0_Add6" value="0"/>
+      <parameter constant="false" id="block0_rv_tot" value="0"/>
+      <parameter constant="false" id="block0_rv_up" value="0"/>
+      <parameter constant="false" id="block0_Add3" value="0"/>
+      <parameter constant="false" id="block0_Add10" value="0"/>
+      <parameter constant="false" id="block0_Ctot_computed" value="0"/>
+      <parameter constant="false" id="block0_Ctot" value="0"/>
+      <parameter constant="false" id="block1_Atot" value="0"/>
+      <parameter constant="false" id="block1_Btot" value="5"/>
+      <parameter constant="false" id="block1_Ctot_in" value="0"/>
+      <parameter constant="false" id="block1_Cprod" value="0"/>
+      <parameter constant="false" id="block1_Cdeg" value="0"/>
+      <parameter constant="false" id="block1_Cfree" value="0"/>
+      <parameter constant="false" id="block1_Dfree" value="1"/>
+      <parameter constant="true" id="block1_A_FB_EN_sw" value="0"/>
+      <parameter constant="true" id="block1_FF_EN_sw1" value="0"/>
+      <parameter constant="true" id="block1_FF_EN_sw2" value="1"/>
+      <parameter constant="true" id="block1_FF_EN_sw3" value="1"/>
+      <parameter constant="true" id="block1_FF_EN_sw4" value="0"/>
+      <parameter constant="true" id="block1_B_FB_EN_sw" value="1"/>
+      <parameter constant="true" id="block1_Ctot_sw" value="0"/>
+      <parameter constant="true" id="block1_Ctot_sw_not" value="1"/>
+      <parameter constant="true" id="block1_n" value="1"/>
+      <parameter constant="true" id="block1_KDfw" value="0.1"/>
+      <parameter constant="true" id="block1_KDrv" value="0.02"/>
+      <parameter constant="true" id="block1_kr" value="1"/>
+      <parameter constant="true" id="block1_ratC" value="0"/>
+      <parameter constant="true" id="block1_kdeg" value="1"/>
+      <parameter constant="false" id="block1_Afree" value="0"/>
+      <parameter constant="false" id="block1_Bfree" value="0"/>
+      <parameter constant="false" id="block1_rate_fw" value="0"/>
+      <parameter constant="false" id="block1_fw_up" value="0"/>
+      <parameter constant="false" id="block1_fw_tot" value="0"/>
+      <parameter constant="false" id="block1_Cfree_out" value="0"/>
+      <parameter constant="false" id="block1_Dfree_out" value="0"/>
+      <parameter constant="false" id="block1_rate_rv" value="0"/>
+      <parameter constant="false" id="block1_Add6" value="0"/>
+      <parameter constant="false" id="block1_rv_tot" value="0"/>
+      <parameter constant="false" id="block1_rv_up" value="0"/>
+      <parameter constant="false" id="block1_Add3" value="0"/>
+      <parameter constant="false" id="block1_Add10" value="0"/>
+      <parameter constant="false" id="block1_Ctot_computed" value="0"/>
+      <parameter constant="false" id="block1_Ctot" value="0"/>
+      <parameter constant="false" id="block2_Atot" value="0"/>
+      <parameter constant="false" id="block2_Btot" value="1"/>
+      <parameter constant="false" id="block2_Ctot_in" value="0"/>
+      <parameter constant="false" id="block2_Cprod" value="0"/>
+      <parameter constant="false" id="block2_Cdeg" value="0"/>
+      <parameter constant="false" id="block2_Cfree" value="0"/>
+      <parameter constant="false" id="block2_Dfree" value="0"/>
+      <parameter constant="true" id="block2_A_FB_EN_sw" value="1"/>
+      <parameter constant="true" id="block2_FF_EN_sw1" value="0"/>
+      <parameter constant="true" id="block2_FF_EN_sw2" value="1"/>
+      <parameter constant="true" id="block2_FF_EN_sw3" value="1"/>
+      <parameter constant="true" id="block2_FF_EN_sw4" value="0"/>
+      <parameter constant="true" id="block2_B_FB_EN_sw" value="0"/>
+      <parameter constant="true" id="block2_Ctot_sw" value="0"/>
+      <parameter constant="true" id="block2_Ctot_sw_not" value="1"/>
+      <parameter constant="true" id="block2_n" value="1"/>
+      <parameter constant="true" id="block2_KDfw" value="0.5"/>
+      <parameter constant="true" id="block2_KDrv" value="1"/>
+      <parameter constant="true" id="block2_kr" value="1"/>
+      <parameter constant="true" id="block2_ratC" value="0"/>
+      <parameter constant="true" id="block2_kdeg" value="1"/>
+      <parameter constant="false" id="block2_Afree" value="0"/>
+      <parameter constant="false" id="block2_Bfree" value="0"/>
+      <parameter constant="false" id="block2_rate_fw" value="0"/>
+      <parameter constant="false" id="block2_fw_up" value="0"/>
+      <parameter constant="false" id="block2_fw_tot" value="0"/>
+      <parameter constant="false" id="block2_Cfree_out" value="0"/>
+      <parameter constant="false" id="block2_Dfree_out" value="0"/>
+      <parameter constant="false" id="block2_rate_rv" value="0"/>
+      <parameter constant="false" id="block2_Add6" value="0"/>
+      <parameter constant="false" id="block2_rv_tot" value="0"/>
+      <parameter constant="false" id="block2_rv_up" value="0"/>
+      <parameter constant="false" id="block2_Add3" value="0"/>
+      <parameter constant="false" id="block2_Add10" value="0"/>
+      <parameter constant="false" id="block2_Ctot_computed" value="0"/>
+      <parameter constant="false" id="block2_Ctot" value="0"/>
+      <parameter constant="false" id="block3_Atot" value="0"/>
+      <parameter constant="false" id="block3_Btot" value="1"/>
+      <parameter constant="false" id="block3_Ctot_in" value="0"/>
+      <parameter constant="false" id="block3_Cprod" value="0"/>
+      <parameter constant="false" id="block3_Cdeg" value="0"/>
+      <parameter constant="false" id="block3_Cfree" value="0"/>
+      <parameter constant="false" id="block3_Dfree" value="0"/>
+      <parameter constant="true" id="block3_A_FB_EN_sw" value="0"/>
+      <parameter constant="true" id="block3_FF_EN_sw1" value="0"/>
+      <parameter constant="true" id="block3_FF_EN_sw2" value="1"/>
+      <parameter constant="true" id="block3_FF_EN_sw3" value="1"/>
+      <parameter constant="true" id="block3_FF_EN_sw4" value="0"/>
+      <parameter constant="true" id="block3_B_FB_EN_sw" value="0"/>
+      <parameter constant="true" id="block3_Ctot_sw" value="0"/>
+      <parameter constant="true" id="block3_Ctot_sw_not" value="1"/>
+      <parameter constant="true" id="block3_n" value="1"/>
+      <parameter constant="true" id="block3_KDfw" value="0.5"/>
+      <parameter constant="true" id="block3_KDrv" value="1"/>
+      <parameter constant="true" id="block3_kr" value="1"/>
+      <parameter constant="true" id="block3_ratC" value="0"/>
+      <parameter constant="true" id="block3_kdeg" value="1"/>
+      <parameter constant="false" id="block3_Afree" value="0"/>
+      <parameter constant="false" id="block3_Bfree" value="0"/>
+      <parameter constant="false" id="block3_rate_fw" value="0"/>
+      <parameter constant="false" id="block3_fw_up" value="0"/>
+      <parameter constant="false" id="block3_fw_tot" value="0"/>
+      <parameter constant="false" id="block3_Cfree_out" value="0"/>
+      <parameter constant="false" id="block3_Dfree_out" value="0"/>
+      <parameter constant="false" id="block3_rate_rv" value="0"/>
+      <parameter constant="false" id="block3_Add6" value="0"/>
+      <parameter constant="false" id="block3_rv_tot" value="0"/>
+      <parameter constant="false" id="block3_rv_up" value="0"/>
+      <parameter constant="false" id="block3_Add3" value="0"/>
+      <parameter constant="false" id="block3_Add10" value="0"/>
+      <parameter constant="false" id="block3_Ctot_computed" value="0"/>
+      <parameter constant="false" id="block3_Ctot" value="0"/>
+    </listOfParameters>
+    <listOfRules>
+      <assignmentRule variable="block0_Atot">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <plus/>
+            <cn> 1 </cn>
+            <apply>
+              <plus/>
+              <ci> block2_Ctot </ci>
+              <apply>
+                <minus/>
+                <ci> block1_Ctot </ci>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block0_Btot">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <cn> 10 </cn>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block0_Ctot_in">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <cn> 0 </cn>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block0_Cprod">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <cn> 0 </cn>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block0_Cdeg">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <cn> 0 </cn>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block0_Cfree">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <plus/>
+            <cn> 0 </cn>
+            <ci> block2_Afree </ci>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block0_Dfree">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <cn> 1 </cn>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block0_Afree">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <minus/>
+            <ci> block0_Atot </ci>
+            <apply>
+              <times/>
+              <ci> block0_A_FB_EN_sw </ci>
+              <ci> block0_Ctot </ci>
+            </apply>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block0_Bfree">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <minus/>
+            <ci> block0_Btot </ci>
+            <apply>
+              <times/>
+              <ci> block0_B_FB_EN_sw </ci>
+              <ci> block0_Ctot </ci>
+            </apply>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block0_rate_fw">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <times/>
+            <ci> block0_Afree </ci>
+            <apply>
+              <power/>
+              <apply>
+                <divide/>
+                <ci> block0_Bfree </ci>
+                <ci> block0_KDfw </ci>
+              </apply>
+              <ci> block0_n </ci>
+            </apply>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block0_fw_up">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <minus/>
+            <ci> block0_Cprod </ci>
+            <apply>
+              <times/>
+              <ci> block0_FF_EN_sw1 </ci>
+              <ci> block0_rate_fw </ci>
+            </apply>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block0_fw_tot">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <plus/>
+            <ci> block0_Cprod </ci>
+            <apply>
+              <times/>
+              <ci> block0_FF_EN_sw2 </ci>
+              <ci> block0_rate_fw </ci>
+            </apply>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block0_Cfree_out">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <ci> block0_Cfree </ci>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block0_Dfree_out">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <ci> block0_Dfree </ci>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block0_rate_rv">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <times/>
+            <ci> block0_Cfree </ci>
+            <apply>
+              <divide/>
+              <ci> block0_Dfree </ci>
+              <ci> block0_KDrv </ci>
+            </apply>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block0_Add6">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <plus/>
+            <ci> block0_Cdeg </ci>
+            <apply>
+              <times/>
+              <ci> block0_Cfree </ci>
+              <ci> block0_ratC </ci>
+            </apply>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block0_rv_tot">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <plus/>
+            <apply>
+              <times/>
+              <ci> block0_FF_EN_sw3 </ci>
+              <ci> block0_rate_rv </ci>
+            </apply>
+            <ci> block0_Add6 </ci>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block0_rv_up">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <minus/>
+            <ci> block0_Add6 </ci>
+            <apply>
+              <times/>
+              <ci> block0_FF_EN_sw4 </ci>
+              <ci> block0_rate_rv </ci>
+            </apply>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block0_Add3">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <minus/>
+            <ci> block0_fw_tot </ci>
+            <apply>
+              <times/>
+              <ci> block0_FF_EN_sw3 </ci>
+              <ci> block0_rate_rv </ci>
+            </apply>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block0_Add10">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <minus/>
+            <apply>
+              <times/>
+              <ci> block0_Add3 </ci>
+              <ci> block0_kr </ci>
+            </apply>
+            <apply>
+              <times/>
+              <ci> block0_Add6 </ci>
+              <ci> block0_kdeg </ci>
+            </apply>
+          </apply>
+        </math>
+            </assignmentRule>
+      <rateRule variable="block0_Ctot_computed">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <times/>
+            <ci> block0_Ctot_sw_not </ci>
+            <ci> block0_Add10 </ci>
+          </apply>
+        </math>
+            </rateRule>
+      <assignmentRule variable="block0_Ctot">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <plus/>
+            <apply>
+              <times/>
+              <ci> block0_Ctot_sw </ci>
+              <ci> block0_Ctot_in </ci>
+            </apply>
+            <ci> block0_Ctot_computed </ci>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="E">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <ci> block0_Afree </ci>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="S">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <ci> block0_Bfree </ci>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block1_Atot">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <plus/>
+            <cn> 0 </cn>
+            <ci> block0_Afree </ci>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block1_Btot">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <cn> 5 </cn>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block1_Ctot_in">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <cn> 0 </cn>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block1_Cprod">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <cn> 0 </cn>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block1_Cdeg">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <cn> 0 </cn>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block1_Cfree">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <plus/>
+            <cn> 0 </cn>
+            <ci> block1_Ctot </ci>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block1_Dfree">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <cn> 1 </cn>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block1_Afree">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <minus/>
+            <ci> block1_Atot </ci>
+            <apply>
+              <times/>
+              <ci> block1_A_FB_EN_sw </ci>
+              <ci> block1_Ctot </ci>
+            </apply>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block1_Bfree">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <minus/>
+            <ci> block1_Btot </ci>
+            <apply>
+              <times/>
+              <ci> block1_B_FB_EN_sw </ci>
+              <ci> block1_Ctot </ci>
+            </apply>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block1_rate_fw">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <times/>
+            <ci> block1_Afree </ci>
+            <apply>
+              <power/>
+              <apply>
+                <divide/>
+                <ci> block1_Bfree </ci>
+                <ci> block1_KDfw </ci>
+              </apply>
+              <ci> block1_n </ci>
+            </apply>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block1_fw_up">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <minus/>
+            <ci> block1_Cprod </ci>
+            <apply>
+              <times/>
+              <ci> block1_FF_EN_sw1 </ci>
+              <ci> block1_rate_fw </ci>
+            </apply>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block1_fw_tot">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <plus/>
+            <ci> block1_Cprod </ci>
+            <apply>
+              <times/>
+              <ci> block1_FF_EN_sw2 </ci>
+              <ci> block1_rate_fw </ci>
+            </apply>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block1_Cfree_out">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <ci> block1_Cfree </ci>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block1_Dfree_out">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <ci> block1_Dfree </ci>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block1_rate_rv">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <times/>
+            <ci> block1_Cfree </ci>
+            <apply>
+              <divide/>
+              <ci> block1_Dfree </ci>
+              <ci> block1_KDrv </ci>
+            </apply>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block1_Add6">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <plus/>
+            <ci> block1_Cdeg </ci>
+            <apply>
+              <times/>
+              <ci> block1_Cfree </ci>
+              <ci> block1_ratC </ci>
+            </apply>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block1_rv_tot">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <plus/>
+            <apply>
+              <times/>
+              <ci> block1_FF_EN_sw3 </ci>
+              <ci> block1_rate_rv </ci>
+            </apply>
+            <ci> block1_Add6 </ci>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block1_rv_up">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <minus/>
+            <ci> block1_Add6 </ci>
+            <apply>
+              <times/>
+              <ci> block1_FF_EN_sw4 </ci>
+              <ci> block1_rate_rv </ci>
+            </apply>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block1_Add3">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <minus/>
+            <ci> block1_fw_tot </ci>
+            <apply>
+              <times/>
+              <ci> block1_FF_EN_sw3 </ci>
+              <ci> block1_rate_rv </ci>
+            </apply>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block1_Add10">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <minus/>
+            <apply>
+              <times/>
+              <ci> block1_Add3 </ci>
+              <ci> block1_kr </ci>
+            </apply>
+            <apply>
+              <times/>
+              <ci> block1_Add6 </ci>
+              <ci> block1_kdeg </ci>
+            </apply>
+          </apply>
+        </math>
+            </assignmentRule>
+      <rateRule variable="block1_Ctot_computed">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <times/>
+            <ci> block1_Ctot_sw_not </ci>
+            <ci> block1_Add10 </ci>
+          </apply>
+        </math>
+            </rateRule>
+      <assignmentRule variable="block1_Ctot">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <plus/>
+            <apply>
+              <times/>
+              <ci> block1_Ctot_sw </ci>
+              <ci> block1_Ctot_in </ci>
+            </apply>
+            <ci> block1_Ctot_computed </ci>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="I">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <ci> block1_Bfree </ci>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="EI">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <ci> block1_Ctot </ci>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block2_Atot">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <plus/>
+            <cn> 0 </cn>
+            <ci> block0_Ctot </ci>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block2_Btot">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <cn> 1 </cn>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block2_Ctot_in">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <cn> 0 </cn>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block2_Cprod">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <cn> 0 </cn>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block2_Cdeg">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <cn> 0 </cn>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block2_Cfree">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <cn> 0 </cn>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block2_Dfree">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <cn> 0 </cn>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block2_Afree">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <minus/>
+            <ci> block2_Atot </ci>
+            <apply>
+              <times/>
+              <ci> block2_A_FB_EN_sw </ci>
+              <ci> block2_Ctot </ci>
+            </apply>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block2_Bfree">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <minus/>
+            <ci> block2_Btot </ci>
+            <apply>
+              <times/>
+              <ci> block2_B_FB_EN_sw </ci>
+              <ci> block2_Ctot </ci>
+            </apply>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block2_rate_fw">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <times/>
+            <ci> block2_Afree </ci>
+            <apply>
+              <power/>
+              <apply>
+                <divide/>
+                <ci> block2_Bfree </ci>
+                <ci> block2_KDfw </ci>
+              </apply>
+              <ci> block2_n </ci>
+            </apply>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block2_fw_up">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <minus/>
+            <ci> block2_Cprod </ci>
+            <apply>
+              <times/>
+              <ci> block2_FF_EN_sw1 </ci>
+              <ci> block2_rate_fw </ci>
+            </apply>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block2_fw_tot">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <plus/>
+            <ci> block2_Cprod </ci>
+            <apply>
+              <times/>
+              <ci> block2_FF_EN_sw2 </ci>
+              <ci> block2_rate_fw </ci>
+            </apply>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block2_Cfree_out">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <ci> block2_Cfree </ci>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block2_Dfree_out">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <ci> block2_Dfree </ci>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block2_rate_rv">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <times/>
+            <ci> block2_Cfree </ci>
+            <apply>
+              <divide/>
+              <ci> block2_Dfree </ci>
+              <ci> block2_KDrv </ci>
+            </apply>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block2_Add6">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <plus/>
+            <ci> block2_Cdeg </ci>
+            <apply>
+              <times/>
+              <ci> block2_Cfree </ci>
+              <ci> block2_ratC </ci>
+            </apply>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block2_rv_tot">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <plus/>
+            <apply>
+              <times/>
+              <ci> block2_FF_EN_sw3 </ci>
+              <ci> block2_rate_rv </ci>
+            </apply>
+            <ci> block2_Add6 </ci>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block2_rv_up">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <minus/>
+            <ci> block2_Add6 </ci>
+            <apply>
+              <times/>
+              <ci> block2_FF_EN_sw4 </ci>
+              <ci> block2_rate_rv </ci>
+            </apply>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block2_Add3">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <minus/>
+            <ci> block2_fw_tot </ci>
+            <apply>
+              <times/>
+              <ci> block2_FF_EN_sw3 </ci>
+              <ci> block2_rate_rv </ci>
+            </apply>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block2_Add10">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <minus/>
+            <apply>
+              <times/>
+              <ci> block2_Add3 </ci>
+              <ci> block2_kr </ci>
+            </apply>
+            <apply>
+              <times/>
+              <ci> block2_Add6 </ci>
+              <ci> block2_kdeg </ci>
+            </apply>
+          </apply>
+        </math>
+            </assignmentRule>
+      <rateRule variable="block2_Ctot_computed">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <times/>
+            <ci> block2_Ctot_sw_not </ci>
+            <ci> block2_Add10 </ci>
+          </apply>
+        </math>
+            </rateRule>
+      <assignmentRule variable="block2_Ctot">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <plus/>
+            <apply>
+              <times/>
+              <ci> block2_Ctot_sw </ci>
+              <ci> block2_Ctot_in </ci>
+            </apply>
+            <ci> block2_Ctot_computed </ci>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="ES">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <ci> block2_Afree </ci>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block3_Atot">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <cn> 0 </cn>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block3_Btot">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <cn> 1 </cn>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block3_Ctot_in">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <cn> 0 </cn>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block3_Cprod">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <plus/>
+            <cn> 0 </cn>
+            <ci> block2_rate_fw </ci>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block3_Cdeg">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <plus/>
+            <cn> 0 </cn>
+            <ci> block2_rate_rv </ci>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block3_Cfree">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <plus/>
+            <cn> 0 </cn>
+            <ci> block3_Ctot </ci>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block3_Dfree">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <cn> 0 </cn>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block3_Afree">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <minus/>
+            <ci> block3_Atot </ci>
+            <apply>
+              <times/>
+              <ci> block3_A_FB_EN_sw </ci>
+              <ci> block3_Ctot </ci>
+            </apply>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block3_Bfree">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <minus/>
+            <ci> block3_Btot </ci>
+            <apply>
+              <times/>
+              <ci> block3_B_FB_EN_sw </ci>
+              <ci> block3_Ctot </ci>
+            </apply>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block3_rate_fw">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <times/>
+            <ci> block3_Afree </ci>
+            <apply>
+              <power/>
+              <apply>
+                <divide/>
+                <ci> block3_Bfree </ci>
+                <ci> block3_KDfw </ci>
+              </apply>
+              <ci> block3_n </ci>
+            </apply>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block3_fw_up">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <minus/>
+            <ci> block3_Cprod </ci>
+            <apply>
+              <times/>
+              <ci> block3_FF_EN_sw1 </ci>
+              <ci> block3_rate_fw </ci>
+            </apply>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block3_fw_tot">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <plus/>
+            <ci> block3_Cprod </ci>
+            <apply>
+              <times/>
+              <ci> block3_FF_EN_sw2 </ci>
+              <ci> block3_rate_fw </ci>
+            </apply>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block3_Cfree_out">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <ci> block3_Cfree </ci>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block3_Dfree_out">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <ci> block3_Dfree </ci>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block3_rate_rv">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <times/>
+            <ci> block3_Cfree </ci>
+            <apply>
+              <divide/>
+              <ci> block3_Dfree </ci>
+              <ci> block3_KDrv </ci>
+            </apply>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block3_Add6">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <plus/>
+            <ci> block3_Cdeg </ci>
+            <apply>
+              <times/>
+              <ci> block3_Cfree </ci>
+              <ci> block3_ratC </ci>
+            </apply>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block3_rv_tot">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <plus/>
+            <apply>
+              <times/>
+              <ci> block3_FF_EN_sw3 </ci>
+              <ci> block3_rate_rv </ci>
+            </apply>
+            <ci> block3_Add6 </ci>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block3_rv_up">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <minus/>
+            <ci> block3_Add6 </ci>
+            <apply>
+              <times/>
+              <ci> block3_FF_EN_sw4 </ci>
+              <ci> block3_rate_rv </ci>
+            </apply>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block3_Add3">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <minus/>
+            <ci> block3_fw_tot </ci>
+            <apply>
+              <times/>
+              <ci> block3_FF_EN_sw3 </ci>
+              <ci> block3_rate_rv </ci>
+            </apply>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="block3_Add10">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <minus/>
+            <apply>
+              <times/>
+              <ci> block3_Add3 </ci>
+              <ci> block3_kr </ci>
+            </apply>
+            <apply>
+              <times/>
+              <ci> block3_Add6 </ci>
+              <ci> block3_kdeg </ci>
+            </apply>
+          </apply>
+        </math>
+            </assignmentRule>
+      <rateRule variable="block3_Ctot_computed">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <times/>
+            <ci> block3_Ctot_sw_not </ci>
+            <ci> block3_Add10 </ci>
+          </apply>
+        </math>
+            </rateRule>
+      <assignmentRule variable="block3_Ctot">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <plus/>
+            <apply>
+              <times/>
+              <ci> block3_Ctot_sw </ci>
+              <ci> block3_Ctot_in </ci>
+            </apply>
+            <ci> block3_Ctot_computed </ci>
+          </apply>
+        </math>
+            </assignmentRule>
+      <assignmentRule variable="P">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <ci> block3_Ctot </ci>
+        </math>
+            </assignmentRule>
+    </listOfRules>
+  </model>
+</sbml>

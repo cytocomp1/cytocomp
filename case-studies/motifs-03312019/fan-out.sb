@@ -1,0 +1,13 @@
+model fan_out()
+  J0: S + T -> U; kf1*S*T - kr1*U
+  J1: S + V -> W; kf2*S*V - kr2*W
+
+  kf1 = 5
+  kf2 = 10
+  kr1 = 5
+  kr2 = 2
+
+  S = 50
+  T = 25
+  V = 10
+end

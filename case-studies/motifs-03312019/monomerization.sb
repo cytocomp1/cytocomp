@@ -1,0 +1,6 @@
+model monomerization()
+  J0: Adimer -> A + A; kf*Adimer-kr*A*A
+  Adimer = 10
+  kf = 5
+  kr = 1
+end

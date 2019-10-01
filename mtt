@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+case $1 in
+"-c")
+  RUN='~run'
+  shift
+  ;;
+"--continuous")
+  RUN='~run'
+  shift
+  ;;
+*)
+  RUN='run'
+  ;;
+esac
+
+echo "$RUN $*"
+sbt "$RUN $*"

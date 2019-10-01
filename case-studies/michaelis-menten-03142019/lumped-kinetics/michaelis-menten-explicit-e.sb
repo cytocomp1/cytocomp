@@ -1,0 +1,7 @@
+model explicit_michaelis_menten()
+  J0: E+S -> P+E; kcat*E*(S/(KM + S))
+  E = 1
+  S = 10
+  kcat = 1
+  KM = 10
+end

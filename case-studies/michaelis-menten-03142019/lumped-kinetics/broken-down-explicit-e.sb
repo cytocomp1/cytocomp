@@ -1,0 +1,11 @@
+model explicit_michaelis_menten()
+  J0: E+S -> ES; kf*E*S - kr*ES
+  J1: ES => P+E; kcat*ES
+  fwd_binding := kf*E*S
+  rv_binding := kr*ES
+  E = 1
+  S = 10
+  kcat = 1
+  kf = 100
+  kr = 1000
+end

@@ -1,0 +1,18 @@
+model inhibitor_irrev()
+  var species E,S,P,I
+  v: E+S => E+P; kcat*E*(S/Km)/(1 + S/Km + I/KI)
+
+  kcat = 2
+
+  Km = 10
+  kbr = 100
+  kbf = kbr*Km
+
+  KI = 5
+  kir = 100
+  kif = kir*KI
+
+  E = 1
+  S = 10
+  I = 1
+end

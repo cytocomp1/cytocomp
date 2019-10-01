@@ -1,0 +1,8 @@
+model dissociation()
+  J0: S -> T + V; kf*S-kr*T*V
+
+  kf = 10
+  kr = 5
+
+  S = 10
+end

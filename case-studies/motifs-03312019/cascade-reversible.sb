@@ -1,0 +1,11 @@
+model cascade_reversible()
+  J0:   => S; k
+  J1: S -> T; kf*S-kr*T
+  J2: T -> U; kf2*T-kr*U
+  J3: U =>  ; kd*U
+  k = 1000
+  kf = 100
+  kf2 = 100
+  kr = 50
+  kd = 20
+end

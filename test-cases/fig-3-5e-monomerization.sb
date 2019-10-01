@@ -1,0 +1,5 @@
+model fig_3_5e_monomerization()
+  J0: Adimer -> A + A; k*Adimer-k*A*A
+  Adimer = 1
+  k = 1
+end

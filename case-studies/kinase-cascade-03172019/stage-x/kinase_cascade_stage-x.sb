@@ -1,0 +1,156 @@
+// Created by libAntimony v2.9.4
+model *kinase_cascade()
+
+  // Compartments and Species:
+  compartment default;
+  substanceOnly species __s0 in default, __s1 in default, __s2 in default;
+  substanceOnly species __s3 in default, __s4 in default, __s5 in default;
+  substanceOnly species __s6 in default, __s7 in default, __s8 in default;
+  substanceOnly species __s9 in default, __s10 in default, __s11 in default;
+  substanceOnly species __s12 in default, __s13 in default, __s14 in default;
+  substanceOnly species __s15 in default, __s16 in default, __s17 in default;
+  substanceOnly species __s18 in default, __s19 in default, __s20 in default;
+
+  // Assignment Rules:
+  __obs0 := __s13 + __s15 + __s18;
+  __obs1 := __s19;
+
+  // Reactions:
+  r0: __s0 + __s1 -> __s6; __s0*__s1*bind_Ras_Rafu_to_RasRaf_kf - __s6*bind_Ras_Rafu_to_RasRaf_kr;
+  r1: __s6 => __s0 + __s7; __s6*catalyze_RasRaf_to_Ras_Rafp_kc;
+  r2: __s4 + __s7 -> __s8; __s4*__s7*bind_PP2A_Rafp_to_PP2ARaf_kf - __s8*bind_PP2A_Rafp_to_PP2ARaf_kr;
+  r3: __s2 + __s7 -> __s9; __s2*__s7*bind_Rafp_MEKuu_to_RafpMEKu_kf - __s9*bind_Rafp_MEKuu_to_RafpMEKu_kr;
+  r4: __s8 => __s1 + __s4; __s8*catalyze_PP2ARaf_to_PP2A_Rafu_kc;
+  r5: __s9 => __s7 + __s10; __s9*catalyze_RafpMEKu_to_Rafp_MEKup_kc;
+  r6: __s4 + __s10 -> __s11; __s10*__s4*bind_PP2A_MEKup_to_PP2AMEKu_kf - __s11*bind_PP2A_MEKup_to_PP2AMEKu_kr;
+  r7: __s7 + __s10 -> __s12; __s10*__s7*bind_Rafp_MEKpu_to_RafpMEKp_kf - __s12*bind_Rafp_MEKpu_to_RafpMEKp_kr;
+  r8: __s11 => __s2 + __s4; __s11*catalyze_PP2AMEKu_to_PP2A_MEKuu_kc;
+  r9: __s12 => __s7 + __s13; __s12*catalyze_RafpMEKp_to_Rafp_MEKpp_kc;
+  r10: __s4 + __s13 -> __s14; __s13*__s4*bind_PP2A_MEKpp_to_PP2AMEKp_kf - __s14*bind_PP2A_MEKpp_to_PP2AMEKp_kr;
+  r11: __s3 + __s13 -> __s15; __s13*__s3*bind_MEKpp_ERKuu_to_MEKppERKu_kf - __s15*bind_MEKpp_ERKuu_to_MEKppERKu_kr;
+  r12: __s14 => __s4 + __s10; __s14*catalyze_PP2AMEKp_to_PP2A_MEKpu_kc;
+  r13: __s15 => __s13 + __s16; __s15*catalyze_MEKppERKu_to_MEKpp_ERKup_kc;
+  r14: __s5 + __s16 -> __s17; __s16*__s5*bind_MKP_ERKup_to_MKPERKu_kf - __s17*bind_MKP_ERKup_to_MKPERKu_kr;
+  r15: __s13 + __s16 -> __s18; __s13*__s16*bind_MEKpp_ERKpu_to_MEKppERKp_kf - __s18*bind_MEKpp_ERKpu_to_MEKppERKp_kr;
+  r16: __s17 => __s3 + __s5; __s17*catalyze_MKPERKu_to_MKP_ERKuu_kc;
+  r17: __s18 => __s13 + __s19; __s18*catalyze_MEKppERKp_to_MEKpp_ERKpp_kc;
+  r18: __s5 + __s19 -> __s20; __s19*__s5*bind_MKP_ERKpp_to_MKPERKp_kf - __s20*bind_MKP_ERKpp_to_MKPERKp_kr;
+  r19: __s20 => __s5 + __s16; __s20*catalyze_MKPERKp_to_MKP_ERKpu_kc;
+
+  // Species initializations:
+  __s0 = 60000/default;
+  __s1 = 70000/default;
+  __s2 = 3000000/default;
+  __s3 = 700000/default;
+  __s4 = 200000/default;
+  __s5 = 17000/default;
+  __s6 = 0;
+  __s7 = 0;
+  __s8 = 0;
+  __s9 = 0;
+  __s10 = 0;
+  __s11 = 0;
+  __s12 = 0;
+  __s13 = 0;
+  __s14 = 0;
+  __s15 = 0;
+  __s16 = 0;
+  __s17 = 0;
+  __s18 = 0;
+  __s19 = 0;
+  __s20 = 0;
+
+  // Compartment initializations:
+  default = 1;
+
+  // Variable initializations:
+  bind_Ras_Rafu_to_RasRaf_kf = 1e-05;
+  bind_Ras_Rafu_to_RasRaf_kr = 0.1;
+  catalyze_RasRaf_to_Ras_Rafp_kc = 0.1;
+  bind_PP2A_Rafp_to_PP2ARaf_kf = 1e-05;
+  bind_PP2A_Rafp_to_PP2ARaf_kr = 0.1;
+  catalyze_PP2ARaf_to_PP2A_Rafu_kc = 0.003;
+  bind_Rafp_MEKuu_to_RafpMEKu_kf = 1e-05;
+  bind_Rafp_MEKuu_to_RafpMEKu_kr = 0.1;
+  catalyze_RafpMEKu_to_Rafp_MEKup_kc = 0.1;
+  bind_PP2A_MEKup_to_PP2AMEKu_kf = 1e-05;
+  bind_PP2A_MEKup_to_PP2AMEKu_kr = 0.1;
+  catalyze_PP2AMEKu_to_PP2A_MEKuu_kc = 0.003;
+  bind_Rafp_MEKpu_to_RafpMEKp_kf = 1e-05;
+  bind_Rafp_MEKpu_to_RafpMEKp_kr = 0.1;
+  catalyze_RafpMEKp_to_Rafp_MEKpp_kc = 0.1;
+  bind_PP2A_MEKpp_to_PP2AMEKp_kf = 1e-05;
+  bind_PP2A_MEKpp_to_PP2AMEKp_kr = 0.1;
+  catalyze_PP2AMEKp_to_PP2A_MEKpu_kc = 0.003;
+  bind_MEKpp_ERKuu_to_MEKppERKu_kf = 1e-05;
+  bind_MEKpp_ERKuu_to_MEKppERKu_kr = 0.1;
+  catalyze_MEKppERKu_to_MEKpp_ERKup_kc = 0.1;
+  bind_MKP_ERKup_to_MKPERKu_kf = 1e-05;
+  bind_MKP_ERKup_to_MKPERKu_kr = 0.1;
+  catalyze_MKPERKu_to_MKP_ERKuu_kc = 0.003;
+  bind_MEKpp_ERKpu_to_MEKppERKp_kf = 1e-05;
+  bind_MEKpp_ERKpu_to_MEKppERKp_kr = 0.1;
+  catalyze_MEKppERKp_to_MEKpp_ERKpp_kc = 0.1;
+  bind_MKP_ERKpp_to_MKPERKp_kf = 1e-05;
+  bind_MKP_ERKpp_to_MKPERKp_kr = 0.1;
+  catalyze_MKPERKp_to_MKP_ERKpu_kc = 0.003;
+
+  // Other declarations:
+  var __obs0, __obs1;
+  const default, bind_Ras_Rafu_to_RasRaf_kf, bind_Ras_Rafu_to_RasRaf_kr, catalyze_RasRaf_to_Ras_Rafp_kc;
+  const bind_PP2A_Rafp_to_PP2ARaf_kf, bind_PP2A_Rafp_to_PP2ARaf_kr, catalyze_PP2ARaf_to_PP2A_Rafu_kc;
+  const bind_Rafp_MEKuu_to_RafpMEKu_kf, bind_Rafp_MEKuu_to_RafpMEKu_kr, catalyze_RafpMEKu_to_Rafp_MEKup_kc;
+  const bind_PP2A_MEKup_to_PP2AMEKu_kf, bind_PP2A_MEKup_to_PP2AMEKu_kr, catalyze_PP2AMEKu_to_PP2A_MEKuu_kc;
+  const bind_Rafp_MEKpu_to_RafpMEKp_kf, bind_Rafp_MEKpu_to_RafpMEKp_kr, catalyze_RafpMEKp_to_Rafp_MEKpp_kc;
+  const bind_PP2A_MEKpp_to_PP2AMEKp_kf, bind_PP2A_MEKpp_to_PP2AMEKp_kr, catalyze_PP2AMEKp_to_PP2A_MEKpu_kc;
+  const bind_MEKpp_ERKuu_to_MEKppERKu_kf, bind_MEKpp_ERKuu_to_MEKppERKu_kr;
+  const catalyze_MEKppERKu_to_MEKpp_ERKup_kc, bind_MKP_ERKup_to_MKPERKu_kf;
+  const bind_MKP_ERKup_to_MKPERKu_kr, catalyze_MKPERKu_to_MKP_ERKuu_kc, bind_MEKpp_ERKpu_to_MEKppERKp_kf;
+  const bind_MEKpp_ERKpu_to_MEKppERKp_kr, catalyze_MEKppERKp_to_MEKpp_ERKpp_kc;
+  const bind_MKP_ERKpp_to_MKPERKp_kf, bind_MKP_ERKpp_to_MKPERKp_kr, catalyze_MKPERKp_to_MKP_ERKpu_kc;
+
+  // Display Names:
+  __s0 is "Ras(k=None)";
+  __s1 is "Raf(s='u', k=None)";
+  __s2 is "MEK(s218='u', s222='u', k=None)";
+  __s3 is "ERK(t185='u', y187='u')";
+  __s4 is "PP2A(ppt=None)";
+  __s5 is "MKP(ppt=None)";
+  __s6 is "Raf(s=('u', 1), k=None) ._br_Ras(k=1)";
+  __s7 is "Raf(s='p', k=None)";
+  __s8 is "PP2A(ppt=1) ._br_Raf(s=('p', 1), k=None)";
+  __s9 is "MEK(s218=('u', 1), s222='u', k=None) ._br_Raf(s='p', k=1)";
+  __s10 is "MEK(s218='p', s222='u', k=None)";
+  __s11 is "MEK(s218=('p', 1), s222='u', k=None) ._br_PP2A(ppt=1)";
+  __s12 is "MEK(s218='p', s222=('u', 1), k=None) ._br_Raf(s='p', k=1)";
+  __s13 is "MEK(s218='p', s222='p', k=None)";
+  __s14 is "MEK(s218='p', s222=('p', 1), k=None) ._br_PP2A(ppt=1)";
+  __s15 is "ERK(t185=('u', 1), y187='u') ._br_MEK(s218='p', s222='p', k=1)";
+  __s16 is "ERK(t185='p', y187='u')";
+  __s17 is "ERK(t185=('p', 1), y187='u') ._br_MKP(ppt=1)";
+  __s18 is "ERK(t185='p', y187=('u', 1)) ._br_MEK(s218='p', s222='p', k=1)";
+  __s19 is "ERK(t185='p', y187='p')";
+  __s20 is "ERK(t185='p', y187=('p', 1)) ._br_MKP(ppt=1)";
+  __obs0 is "ppMEK";
+  __obs1 is "ppERK";
+  r0 is "bind_Ras_Rafu_to_RasRaf";
+  r1 is "catalyze_RasRaf_to_Ras_Rafp";
+  r2 is "bind_PP2A_Rafp_to_PP2ARaf";
+  r3 is "bind_Rafp_MEKuu_to_RafpMEKu";
+  r4 is "catalyze_PP2ARaf_to_PP2A_Rafu";
+  r5 is "catalyze_RafpMEKu_to_Rafp_MEKup";
+  r6 is "bind_PP2A_MEKup_to_PP2AMEKu";
+  r7 is "bind_Rafp_MEKpu_to_RafpMEKp";
+  r8 is "catalyze_PP2AMEKu_to_PP2A_MEKuu";
+  r9 is "catalyze_RafpMEKp_to_Rafp_MEKpp";
+  r10 is "bind_PP2A_MEKpp_to_PP2AMEKp";
+  r11 is "bind_MEKpp_ERKuu_to_MEKppERKu";
+  r12 is "catalyze_PP2AMEKp_to_PP2A_MEKpu";
+  r13 is "catalyze_MEKppERKu_to_MEKpp_ERKup";
+  r14 is "bind_MKP_ERKup_to_MKPERKu";
+  r15 is "bind_MEKpp_ERKpu_to_MEKppERKp";
+  r16 is "catalyze_MKPERKu_to_MKP_ERKuu";
+  r17 is "catalyze_MEKppERKp_to_MEKpp_ERKpp";
+  r18 is "bind_MKP_ERKpp_to_MKPERKp";
+  r19 is "catalyze_MKPERKp_to_MKP_ERKpu";
+end

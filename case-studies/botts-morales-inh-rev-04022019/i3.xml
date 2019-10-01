@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created by libAntimony version v2.8.1 on 2019-04-02 15:17 with libSBML version 5.12.1. -->
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
+  <model id="inhibitor_irrev" name="inhibitor_irrev">
+    <listOfCompartments>
+      <compartment sboTerm="SBO:0000410" id="default_compartment" spatialDimensions="3" size="1" constant="true"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="E" compartment="default_compartment" initialConcentration="1" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="S" compartment="default_compartment" initialConcentration="10" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="P" compartment="default_compartment" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="I" compartment="default_compartment" initialConcentration="100" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter id="Vf" constant="true"/>
+      <parameter id="Keq" constant="true"/>
+      <parameter id="Ks" value="10" constant="true"/>
+      <parameter id="Kp" constant="true"/>
+      <parameter id="KI" value="5" constant="true"/>
+      <parameter id="rho" value="1" constant="true"/>
+      <parameter id="kcatf" constant="true"/>
+      <parameter id="kcatr" constant="true"/>
+      <parameter id="kbr" constant="true"/>
+      <parameter id="kbf" constant="true"/>
+      <parameter id="kpr" constant="true"/>
+      <parameter id="kpf" constant="true"/>
+      <parameter id="Vr" constant="true"/>
+      <parameter id="kir" constant="true"/>
+      <parameter id="kif" constant="true"/>
+    </listOfParameters>
+    <listOfInitialAssignments>
+      <initialAssignment symbol="Vf">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> kcatf </ci>
+            <ci> kbf </ci>
+            <ci> Ks </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="Keq">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <apply>
+              <divide/>
+              <ci> Vf </ci>
+              <ci> Vr </ci>
+            </apply>
+            <apply>
+              <divide/>
+              <ci> Kp </ci>
+              <ci> Ks </ci>
+            </apply>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="Kp">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <ci> kcatr </ci>
+            <ci> kcatf </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="kcatf">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <cn type="integer"> 2 </cn>
+            <ci> rho </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="kcatr">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <cn type="integer"> 1 </cn>
+            <ci> rho </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="kbr">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> rho </ci>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="kbf">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> kbr </ci>
+            <ci> Ks </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="kpr">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> rho </ci>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="kpf">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> kpr </ci>
+            <ci> Kp </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="Vr">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> kcatr </ci>
+            <ci> kbr </ci>
+            <ci> Kp </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="kir">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> rho </ci>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="kif">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> kir </ci>
+            <ci> KI </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+    </listOfInitialAssignments>
+    <listOfReactions>
+      <reaction id="v" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="E" stoichiometry="1" constant="true"/>
+          <speciesReference species="S" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="E" stoichiometry="1" constant="true"/>
+          <speciesReference species="P" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="I"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> Vf </ci>
+                <ci> E </ci>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <minus/>
+                    <ci> S </ci>
+                    <apply>
+                      <divide/>
+                      <ci> P </ci>
+                      <ci> Keq </ci>
+                    </apply>
+                  </apply>
+                  <ci> Ks </ci>
+                </apply>
+              </apply>
+              <apply>
+                <plus/>
+                <cn type="integer"> 1 </cn>
+                <apply>
+                  <divide/>
+                  <ci> S </ci>
+                  <ci> Ks </ci>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> P </ci>
+                  <ci> Kp </ci>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> I </ci>
+                  <ci> KI </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

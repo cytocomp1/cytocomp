@@ -1,0 +1,25 @@
+model repressilator()
+  var species PX = 1
+  J0_0: PX + Z => PX_inact; kbindX*PX*Z
+  J0_1: PX => mX ; ktxX*PX
+  J0_2: mX => X ; ktlX*mX
+  const kbindX = 1
+  const ktxX = 1
+  const ktlX = 1
+
+  var species PY = 1
+  J1_0: PY + X => PY_inact; kbindY*PY*X
+  J1_1: PY => mY ; ktxY*PY
+  J1_2: mY => Y ; ktlY*mY
+  const kbindY = 1
+  const ktxY = 1
+  const ktlY = 1
+
+  var species PZ = 1
+  J2_0: PZ + Y => PZ_inact; kbindZ*PZ*Y
+  J2_1: PZ => mZ ; ktxZ*PZ
+  J2_2: mZ => Z ; ktlZ*mZ
+  const kbindZ = 1
+  const ktxZ = 1
+  const ktlZ = 1
+end

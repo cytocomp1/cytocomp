@@ -1,0 +1,5 @@
+model fig_3_5d_dimerization()
+  J0: A + A -> Adimer; k*A*A
+  A = 1
+  k = 1
+end

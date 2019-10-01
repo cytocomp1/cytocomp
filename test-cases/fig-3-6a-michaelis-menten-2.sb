@@ -1,0 +1,7 @@
+model fig_3_6a_michaelis_menten()
+  J0: S -> P; kcat*E*(S/(Km + S))
+  E = 1
+  S = 1
+  kcat = 1
+  Km = 1
+end

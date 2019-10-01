@@ -1,0 +1,7 @@
+model fig_hms_loop()
+  J0: A   -> B+C; k*A
+  J1: C   -> D  ; k*C
+  J2: B+D -> A  ; k*B*D
+  A = 1
+  k = 1
+end

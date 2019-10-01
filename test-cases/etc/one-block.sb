@@ -1,0 +1,5 @@
+model one_block()
+  J0:   => A; k
+  J1: A =>  ; k*A
+  k = 1
+end

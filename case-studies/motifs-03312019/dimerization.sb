@@ -1,0 +1,6 @@
+model fig_3_5d_dimerization()
+  J0: A + A -> Adimer; kf*A*A - kr*Adimer
+  A = 10
+  kf = 10
+  kr = 5
+end

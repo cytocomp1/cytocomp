@@ -1,0 +1,13 @@
+model repressor_combined()
+  var species R
+  v: => A; a0_tr + a_tr * (Km^n) / (R^n + Km^n)
+
+  kr = 100
+  kf = 216250
+  a0_tr = 0.865
+  a_tr = 100
+  Km = (kr^0.5)/kf
+  n = 2
+
+  R = 1
+end

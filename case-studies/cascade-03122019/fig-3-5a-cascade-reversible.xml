@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created by libAntimony version v2.8.1 on 2019-03-30 16:22 with libSBML version 5.12.1. -->
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
+  <model id="fig_3_5a_cascade" name="fig_3_5a_cascade">
+    <listOfCompartments>
+      <compartment sboTerm="SBO:0000410" id="default_compartment" spatialDimensions="3" size="1" constant="true"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="A" compartment="default_compartment" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="B" compartment="default_compartment" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="C" compartment="default_compartment" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter id="k" value="100" constant="true"/>
+      <parameter id="kf" value="100" constant="true"/>
+      <parameter id="kr" value="50" constant="true"/>
+      <parameter id="kf2" value="100" constant="true"/>
+      <parameter id="kd" value="20" constant="true"/>
+    </listOfParameters>
+    <listOfReactions>
+      <reaction id="J0" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference species="A" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <ci> k </ci>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J1" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference species="A" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="B" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> kf </ci>
+                <ci> A </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kr </ci>
+                <ci> B </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J2" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference species="B" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="C" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> kf2 </ci>
+                <ci> B </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kr </ci>
+                <ci> C </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J3" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="C" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kd </ci>
+              <ci> C </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

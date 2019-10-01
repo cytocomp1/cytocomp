@@ -1,0 +1,7 @@
+model fig_3_6c_loop()
+  J0:   => A; k
+  J1: A => B; k*A
+  J2: B =>  ; k*B
+  J3: B => A; k*B
+  k = 1
+end

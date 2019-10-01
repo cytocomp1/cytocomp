@@ -1,0 +1,31 @@
+model inhibitor_irrev_mechanistic()
+  var species E,S,P,I
+  substrate_binding: E+S -> ES; kbf*E*S - kbr*ES
+  inhibitor_binding: E+I -> EI; kif*E*I - kir*EI
+  v: ES -> E+P; kcatf*ES - kcatr*E*P
+
+  rho = I
+  kcatf = 2*rho*S
+  kcatr = 1*rho*S
+
+  Ks = 10
+  kbr = rho
+  kbf = kbr*Ks
+
+  Kp = kcatr/kcatf
+  kpr = rho
+  kpf = kpr*Kp
+
+  // Haldane relation
+  Vf = kcatf*kbf*Ks
+  Vr = kcatr*kbr*Kp
+  Keq = (Vf/Vr)*(Kp/Ks)
+
+  KI = 5
+  kir = rho
+  kif = kir*KI
+
+  E = 1
+  S = 10
+  I = 50
+end

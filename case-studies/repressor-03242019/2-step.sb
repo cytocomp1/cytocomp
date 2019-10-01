@@ -1,0 +1,11 @@
+model repressor_2_step()
+  J0: S -> C; (kf^2)*(R^2)*S - kr*C
+  v: => A; tr_rate*S
+
+  kr = 10
+  kf = 10
+  tr_rate = 1
+
+  S = 1
+  R = 1
+end

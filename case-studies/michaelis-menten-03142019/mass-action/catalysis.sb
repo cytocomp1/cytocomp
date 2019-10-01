@@ -1,0 +1,7 @@
+model catalysis()
+  J0: E+S -> ES; kf*E*S - kr*ES
+  J1: ES => P+E; kcat*ES
+  kf = 100
+  kr = 50
+  kcat = 1000
+end

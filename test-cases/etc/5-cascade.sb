@@ -1,0 +1,9 @@
+model fig_3_5a_cascade()
+  J0:   => A; k
+  J1: A => B; k*A
+  J2: B => C; k*B
+  J3: C => D; k*C
+  J4: D => E; k*D
+  J5: E =>  ; k*E
+  k = 1
+end

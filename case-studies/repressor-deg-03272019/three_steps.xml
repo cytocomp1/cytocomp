@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created by libAntimony version v2.8.1 on 2019-03-28 17:08 with libSBML version 5.12.1. -->
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
+  <model id="repressor_combined" name="repressor_combined">
+    <listOfCompartments>
+      <compartment sboTerm="SBO:0000410" id="default_compartment" spatialDimensions="3" size="1" constant="true"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="PX" compartment="default_compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="PY" compartment="default_compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="PZ" compartment="default_compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="X" compartment="default_compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Y" compartment="default_compartment" initialConcentration="0.5" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Z" compartment="default_compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter id="a0_tr" value="0.865" constant="true"/>
+      <parameter id="a_tr" constant="true"/>
+      <parameter id="Km" constant="true"/>
+      <parameter id="n" value="2" constant="true"/>
+      <parameter id="kdeg_rna" value="100" constant="true"/>
+      <parameter id="k_tl" value="20" constant="true"/>
+      <parameter id="kdeg_protein" value="20" constant="true"/>
+      <parameter id="kr" value="1000" constant="true"/>
+      <parameter id="kf" value="7.90569415042095" constant="true"/>
+    </listOfParameters>
+    <listOfInitialAssignments>
+      <initialAssignment symbol="a_tr">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <cn type="integer"> 100 </cn>
+            <cn type="integer"> 865 </cn>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="Km">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <power/>
+              <ci> kr </ci>
+              <cn> 0.5 </cn>
+            </apply>
+            <ci> kf </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+    </listOfInitialAssignments>
+    <listOfReactions>
+      <reaction id="txX" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference species="X" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="PZ"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <plus/>
+                <ci> a0_tr </ci>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <ci> a_tr </ci>
+                    <apply>
+                      <power/>
+                      <ci> Km </ci>
+                      <ci> n </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> PZ </ci>
+                      <ci> n </ci>
+                    </apply>
+                    <apply>
+                      <power/>
+                      <ci> Km </ci>
+                      <ci> n </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kdeg_rna </ci>
+                <ci> X </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="trX" reversible="true" fast="false">
+        <listOfProducts>
+          <speciesReference species="PX" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="X"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> k_tl </ci>
+                <ci> X </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kdeg_protein </ci>
+                <ci> PX </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="txY" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference species="Y" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="PX"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <plus/>
+                <ci> a0_tr </ci>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <ci> a_tr </ci>
+                    <apply>
+                      <power/>
+                      <ci> Km </ci>
+                      <ci> n </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> PX </ci>
+                      <ci> n </ci>
+                    </apply>
+                    <apply>
+                      <power/>
+                      <ci> Km </ci>
+                      <ci> n </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kdeg_rna </ci>
+                <ci> Y </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="trY" reversible="true" fast="false">
+        <listOfProducts>
+          <speciesReference species="PY" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="Y"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> k_tl </ci>
+                <ci> Y </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kdeg_protein </ci>
+                <ci> PY </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="txZ" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference species="Z" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="PY"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <plus/>
+                <ci> a0_tr </ci>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <ci> a_tr </ci>
+                    <apply>
+                      <power/>
+                      <ci> Km </ci>
+                      <ci> n </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> PY </ci>
+                      <ci> n </ci>
+                    </apply>
+                    <apply>
+                      <power/>
+                      <ci> Km </ci>
+                      <ci> n </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kdeg_rna </ci>
+                <ci> Z </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="trZ" reversible="true" fast="false">
+        <listOfProducts>
+          <speciesReference species="PZ" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="Z"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> k_tl </ci>
+                <ci> Z </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kdeg_protein </ci>
+                <ci> PZ </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

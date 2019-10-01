@@ -1,0 +1,14 @@
+target/
+*.log
+mtt-completion.bash
+*.kate-swp
+/test-cases/*.xml
+/test-cases/etc/*.xml
+/test-cases/etc/5-cascade.xml
+*.swp
+/python/mtt.egg-info
+/python/mtt/__pycache__
+*.pyc
+*.tmp
+notebooks/motifs/*.pdf
+default.profraw

@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created by libAntimony version v2.8.1 on 2019-03-19 12:05 with libSBML version 5.12.1. -->
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
+  <model id="kinase_cascade" name="kinase_cascade">
+    <listOfCompartments>
+      <compartment id="default" spatialDimensions="3" size="1" constant="true"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="__s0" name="Ras(k=None)" compartment="default" initialAmount="60000" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="__s1" name="Raf(s=&apos;u&apos;, k=None)" compartment="default" initialAmount="70000" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="__s2" name="MEK(s218=&apos;u&apos;, s222=&apos;u&apos;, k=None)" compartment="default" initialAmount="3000000" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="__s3" name="ERK(t185=&apos;u&apos;, y187=&apos;u&apos;)" compartment="default" initialAmount="700000" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="__s4" name="PP2A(ppt=None)" compartment="default" initialAmount="200000" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="__s5" name="MKP(ppt=None)" compartment="default" initialAmount="17000" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="__s6" name="Raf(s=(&apos;u&apos;, 1), k=None) ._br_Ras(k=1)" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="__s7" name="Raf(s=&apos;p&apos;, k=None)" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="__s8" name="PP2A(ppt=1) ._br_Raf(s=(&apos;p&apos;, 1), k=None)" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="__s9" name="MEK(s218=(&apos;u&apos;, 1), s222=&apos;u&apos;, k=None) ._br_Raf(s=&apos;p&apos;, k=1)" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="__s10" name="MEK(s218=&apos;p&apos;, s222=&apos;u&apos;, k=None)" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="__s11" name="MEK(s218=(&apos;p&apos;, 1), s222=&apos;u&apos;, k=None) ._br_PP2A(ppt=1)" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="__s12" name="MEK(s218=&apos;p&apos;, s222=(&apos;u&apos;, 1), k=None) ._br_Raf(s=&apos;p&apos;, k=1)" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="__s13" name="MEK(s218=&apos;p&apos;, s222=&apos;p&apos;, k=None)" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="__s14" name="MEK(s218=&apos;p&apos;, s222=(&apos;p&apos;, 1), k=None) ._br_PP2A(ppt=1)" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="__s15" name="ERK(t185=(&apos;u&apos;, 1), y187=&apos;u&apos;) ._br_MEK(s218=&apos;p&apos;, s222=&apos;p&apos;, k=1)" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="__s16" name="ERK(t185=&apos;p&apos;, y187=&apos;u&apos;)" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="__s17" name="ERK(t185=(&apos;p&apos;, 1), y187=&apos;u&apos;) ._br_MKP(ppt=1)" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="__s18" name="ERK(t185=&apos;p&apos;, y187=(&apos;u&apos;, 1)) ._br_MEK(s218=&apos;p&apos;, s222=&apos;p&apos;, k=1)" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="__s19" name="ERK(t185=&apos;p&apos;, y187=&apos;p&apos;)" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="__s20" name="ERK(t185=&apos;p&apos;, y187=(&apos;p&apos;, 1)) ._br_MKP(ppt=1)" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter id="__obs0" name="ppMEK" constant="false"/>
+      <parameter id="__obs1" name="ppERK" constant="false"/>
+      <parameter id="bind_Ras_Rafu_to_RasRaf_kf" value="1e-05" constant="true"/>
+      <parameter id="bind_Ras_Rafu_to_RasRaf_kr" value="0.1" constant="true"/>
+      <parameter id="catalyze_RasRaf_to_Ras_Rafp_kc" value="0.1" constant="true"/>
+      <parameter id="bind_PP2A_Rafp_to_PP2ARaf_kf" value="1e-05" constant="true"/>
+      <parameter id="bind_PP2A_Rafp_to_PP2ARaf_kr" value="0.1" constant="true"/>
+      <parameter id="bind_Rafp_MEKuu_to_RafpMEKu_kf" value="1e-05" constant="true"/>
+      <parameter id="bind_Rafp_MEKuu_to_RafpMEKu_kr" value="0.1" constant="true"/>
+      <parameter id="catalyze_PP2ARaf_to_PP2A_Rafu_kc" value="0.003" constant="true"/>
+      <parameter id="catalyze_RafpMEKu_to_Rafp_MEKup_kc" value="0.1" constant="true"/>
+      <parameter id="bind_PP2A_MEKup_to_PP2AMEKu_kf" value="1e-05" constant="true"/>
+      <parameter id="bind_PP2A_MEKup_to_PP2AMEKu_kr" value="0.1" constant="true"/>
+      <parameter id="bind_Rafp_MEKpu_to_RafpMEKp_kf" value="1e-05" constant="true"/>
+      <parameter id="bind_Rafp_MEKpu_to_RafpMEKp_kr" value="0.1" constant="true"/>
+      <parameter id="catalyze_PP2AMEKu_to_PP2A_MEKuu_kc" value="0.003" constant="true"/>
+      <parameter id="catalyze_RafpMEKp_to_Rafp_MEKpp_kc" value="0.1" constant="true"/>
+      <parameter id="bind_PP2A_MEKpp_to_PP2AMEKp_kf" value="1e-05" constant="true"/>
+      <parameter id="bind_PP2A_MEKpp_to_PP2AMEKp_kr" value="0.1" constant="true"/>
+      <parameter id="bind_MEKpp_ERKuu_to_MEKppERKu_kf" value="1e-05" constant="true"/>
+      <parameter id="bind_MEKpp_ERKuu_to_MEKppERKu_kr" value="0.1" constant="true"/>
+      <parameter id="catalyze_PP2AMEKp_to_PP2A_MEKpu_kc" value="0.003" constant="true"/>
+      <parameter id="catalyze_MEKppERKu_to_MEKpp_ERKup_kc" value="0.1" constant="true"/>
+      <parameter id="bind_MKP_ERKup_to_MKPERKu_kf" value="1e-05" constant="true"/>
+      <parameter id="bind_MKP_ERKup_to_MKPERKu_kr" value="0.1" constant="true"/>
+      <parameter id="catalyze_MKPERKu_to_MKP_ERKuu_kc" value="0.003" constant="true"/>
+      <parameter id="bind_MEKpp_ERKpu_to_MEKppERKp_kf" value="1e-05" constant="true"/>
+      <parameter id="bind_MEKpp_ERKpu_to_MEKppERKp_kr" value="0.1" constant="true"/>
+      <parameter id="catalyze_MEKppERKp_to_MEKpp_ERKpp_kc" value="0.1" constant="true"/>
+      <parameter id="bind_MKP_ERKpp_to_MKPERKp_kf" value="1e-05" constant="true"/>
+      <parameter id="bind_MKP_ERKpp_to_MKPERKp_kr" value="0.1" constant="true"/>
+      <parameter id="catalyze_MKPERKp_to_MKP_ERKpu_kc" value="0.003" constant="true"/>
+    </listOfParameters>
+    <listOfRules>
+      <assignmentRule variable="__obs0">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <ci> __s13 </ci>
+            <ci> __s15 </ci>
+            <ci> __s18 </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="__obs1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> __s19 </ci>
+        </math>
+      </assignmentRule>
+    </listOfRules>
+    <listOfReactions>
+      <reaction id="r0" name="bind_Ras_Rafu_to_RasRaf" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference species="__s0" stoichiometry="1" constant="true"/>
+          <speciesReference species="__s1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="__s6" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> __s0 </ci>
+                <ci> __s1 </ci>
+                <ci> bind_Ras_Rafu_to_RasRaf_kf </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> __s6 </ci>
+                <ci> bind_Ras_Rafu_to_RasRaf_kr </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r1" name="catalyze_RasRaf_to_Ras_Rafp" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="__s6" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="__s0" stoichiometry="1" constant="true"/>
+          <speciesReference species="__s7" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> __s6 </ci>
+              <ci> catalyze_RasRaf_to_Ras_Rafp_kc </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r2" name="bind_PP2A_Rafp_to_PP2ARaf" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference species="__s4" stoichiometry="1" constant="true"/>
+          <speciesReference species="__s7" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="__s8" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> __s4 </ci>
+                <ci> __s7 </ci>
+                <ci> bind_PP2A_Rafp_to_PP2ARaf_kf </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> __s8 </ci>
+                <ci> bind_PP2A_Rafp_to_PP2ARaf_kr </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r3" name="bind_Rafp_MEKuu_to_RafpMEKu" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference species="__s2" stoichiometry="1" constant="true"/>
+          <speciesReference species="__s7" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="__s9" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> __s2 </ci>
+                <ci> __s7 </ci>
+                <ci> bind_Rafp_MEKuu_to_RafpMEKu_kf </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> __s9 </ci>
+                <ci> bind_Rafp_MEKuu_to_RafpMEKu_kr </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r4" name="catalyze_PP2ARaf_to_PP2A_Rafu" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="__s8" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="__s1" stoichiometry="1" constant="true"/>
+          <speciesReference species="__s4" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> __s8 </ci>
+              <ci> catalyze_PP2ARaf_to_PP2A_Rafu_kc </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r5" name="catalyze_RafpMEKu_to_Rafp_MEKup" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="__s9" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="__s7" stoichiometry="1" constant="true"/>
+          <speciesReference species="__s10" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> __s9 </ci>
+              <ci> catalyze_RafpMEKu_to_Rafp_MEKup_kc </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r6" name="bind_PP2A_MEKup_to_PP2AMEKu" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference species="__s4" stoichiometry="1" constant="true"/>
+          <speciesReference species="__s10" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="__s11" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> __s10 </ci>
+                <ci> __s4 </ci>
+                <ci> bind_PP2A_MEKup_to_PP2AMEKu_kf </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> __s11 </ci>
+                <ci> bind_PP2A_MEKup_to_PP2AMEKu_kr </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r7" name="bind_Rafp_MEKpu_to_RafpMEKp" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference species="__s7" stoichiometry="1" constant="true"/>
+          <speciesReference species="__s10" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="__s12" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> __s10 </ci>
+                <ci> __s7 </ci>
+                <ci> bind_Rafp_MEKpu_to_RafpMEKp_kf </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> __s12 </ci>
+                <ci> bind_Rafp_MEKpu_to_RafpMEKp_kr </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r8" name="catalyze_PP2AMEKu_to_PP2A_MEKuu" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="__s11" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="__s2" stoichiometry="1" constant="true"/>
+          <speciesReference species="__s4" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> __s11 </ci>
+              <ci> catalyze_PP2AMEKu_to_PP2A_MEKuu_kc </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r9" name="catalyze_RafpMEKp_to_Rafp_MEKpp" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="__s12" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="__s7" stoichiometry="1" constant="true"/>
+          <speciesReference species="__s13" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> __s12 </ci>
+              <ci> catalyze_RafpMEKp_to_Rafp_MEKpp_kc </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r10" name="bind_PP2A_MEKpp_to_PP2AMEKp" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference species="__s4" stoichiometry="1" constant="true"/>
+          <speciesReference species="__s13" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="__s14" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> __s13 </ci>
+                <ci> __s4 </ci>
+                <ci> bind_PP2A_MEKpp_to_PP2AMEKp_kf </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> __s14 </ci>
+                <ci> bind_PP2A_MEKpp_to_PP2AMEKp_kr </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r11" name="bind_MEKpp_ERKuu_to_MEKppERKu" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference species="__s3" stoichiometry="1" constant="true"/>
+          <speciesReference species="__s13" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="__s15" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> __s13 </ci>
+                <ci> __s3 </ci>
+                <ci> bind_MEKpp_ERKuu_to_MEKppERKu_kf </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> __s15 </ci>
+                <ci> bind_MEKpp_ERKuu_to_MEKppERKu_kr </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

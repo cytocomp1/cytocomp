@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created by libAntimony version v2.8.1 on 2019-03-26 19:24 with libSBML version 5.12.1. -->
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
+  <model id="repressor_combined" name="repressor_combined">
+    <listOfCompartments>
+      <compartment sboTerm="SBO:0000410" id="default_compartment" spatialDimensions="3" size="1" constant="true"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="R" compartment="default_compartment" initialConcentration="1" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="A" compartment="default_compartment" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter id="a0_tr" value="0.865" constant="true"/>
+      <parameter id="a_tr" value="100" constant="true"/>
+      <parameter id="Km" constant="true"/>
+      <parameter id="n" value="2" constant="true"/>
+      <parameter id="kr" value="100" constant="true"/>
+      <parameter id="kf" value="216250" constant="true"/>
+    </listOfParameters>
+    <listOfInitialAssignments>
+      <initialAssignment symbol="Km">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <power/>
+              <ci> kr </ci>
+              <cn> 0.5 </cn>
+            </apply>
+            <ci> kf </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+    </listOfInitialAssignments>
+    <listOfReactions>
+      <reaction id="v" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference species="A" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="R"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <plus/>
+              <ci> a0_tr </ci>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> a_tr </ci>
+                  <apply>
+                    <power/>
+                    <ci> Km </ci>
+                    <ci> n </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <power/>
+                    <ci> R </ci>
+                    <ci> n </ci>
+                  </apply>
+                  <apply>
+                    <power/>
+                    <ci> Km </ci>
+                    <ci> n </ci>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

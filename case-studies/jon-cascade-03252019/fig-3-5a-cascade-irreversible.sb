@@ -1,0 +1,11 @@
+model fig_3_5a_cascade()
+  J0:   => A; k
+  J1: A => B; kf*A
+  J2: B => C; kf2*B
+  J3: C =>  ; kd*C
+  k = 100
+  kf = 100
+  kf2 = 100
+  kr = 50
+  kd = 20
+end

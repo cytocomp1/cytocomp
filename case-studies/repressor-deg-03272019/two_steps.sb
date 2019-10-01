@@ -1,0 +1,25 @@
+model repressor_combined()
+  var species PX, PY, PZ, X, Y, Z
+  txX: => X; a0_tr + a_tr * (Km^n) / (PZ^n + Km^n) - kdeg_rna*X
+  trX: -> PX; k_tl*X - kdeg_protein*PX
+  txY: => Y; a0_tr + a_tr * (Km^n) / (PX^n + Km^n) - kdeg_rna*Y
+  trY: -> PY; k_tl*Y - kdeg_protein*PY
+
+  kr = 1000
+  kf = 7.905694150420948
+  a0_tr = 0.865
+  a_tr = 100*865
+  Km = (kr^0.5)/kf
+  n = 2
+  k_tl = 20
+
+  kdeg_rna = 100
+  kdeg_protein = 20
+
+  PX = 0
+  X = 0
+  PY = 0
+  Y = 1
+  PZ = 0
+  Z = 0
+end
