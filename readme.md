@@ -4,7 +4,19 @@ This repository contains a compiler for cytomorphic chips developed by the Sarpe
 
 ## Building
 
-First install `sbt` and ensure you have it on your path.
+First install `sbt` and ensure you have it on your path. Compile the project with:
+
+```
+sbt compile
+```
+
+The cytomorphic compiler can be used either from the command line or as a [Py4J server](https://www.py4j.org/) (and can thus be called from Python inside Jupyter notebooks, see `notebooks`). To use the Py4J server mode:
+
+```
+sbt ~run server
+```
+
+See the `notebooks` directory for examples for how to use the compiler's API.
 
 ## Design Documents
 
