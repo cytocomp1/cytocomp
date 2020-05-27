@@ -23,7 +23,7 @@ See the `notebooks` directory for examples for how to use the compiler's API.
 [Antimony](https://sourceforge.net/projects/antimony/) is a short-hand language for SBML. The cytomorphic compiler can accept Antimony as input instead of SBML provided that you have the `antimony` Python module install and that it is in your PYTHONPATH (in other words, running `python3 -c 'import antimony` in the terminal should produce no errors). Additionally, some notebook examples require [Tellurium](https://www.github.com/sys-bio/tellurium). These have been tested on Python 3.6 and can be installed with the `requirements.txt` file in this repository:
 
 ```
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 
 ## Design Documents
