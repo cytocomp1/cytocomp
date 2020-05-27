@@ -1,6 +1,10 @@
 # Introduction
 
-This repository hosts the code for the Model Topology Toolkit (MTT), a compiler for cytomorphic hardware (analogous to a HDL for digital logic). MTT essentially converts Systems Biology Markup Language (SBML) into a hardware configuration which can be used to program cytomorphic hardware
+This repository contains a compiler for cytomorphic chips developed by the Sarpeshlar lab at Dartmouth. This compiler essentially converts Systems Biology Markup Language (SBML) into a hardware configuration, similar to VLSI technologies for digital hardware.
+
+## Building
+
+First install `sbt` and ensure you have it on your path.
 
 ## Design Documents
 
@@ -11,4 +15,3 @@ A design plan is available [here](https://docs.google.com/document/d/1Di-Arw7D3o
 
 ## References
 * Woo, Sung Sik, "Fast Simulation of Stochastic Biochemical Reaction Networks on Cytomorphic Chips." PhD thesis, Massachusetts Instite of Technology, Cambridge MA 02139-4307, 2016.
-* Next reference...
