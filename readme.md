@@ -18,6 +18,14 @@ sbt ~run server
 
 See the `notebooks` directory for examples for how to use the compiler's API.
 
+## Model input via Antimony
+
+[Antimony](https://sourceforge.net/projects/antimony/) is a short-hand language for SBML. The cytomorphic compiler can accept Antimony as input instead of SBML provided that you have the `antimony` Python module install and that it is in your PYTHONPATH (in other words, running `python3 -c 'import antimony` in the terminal should produce no errors). Additionally, some notebook examples require [Tellurium](https://www.github.com/sys-bio/tellurium). These have been tested on Python 3.6 and can be installed with the `requirements.txt` file in this repository:
+
+```
+pip install requirements.txt
+```
+
 ## Design Documents
 
 A design plan is available [here](https://docs.google.com/document/d/1Di-Arw7D3oA38utko94PaDOYi06F3X9ToWq-YKgw0DQ/edit?usp=sharing).
