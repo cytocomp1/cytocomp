@@ -52,13 +52,29 @@ Run:
 pipenv install
 ```
 
-Then, before running the server, run:
+Then, before running any other commands, run:
 
 ```
 pipenv shell
 ```
 
 For more information on how to use Pipenv, see the [Pipenv homepage](https://pipenv.pypa.io/en/latest/).
+
+### Test your setup
+
+Assuming that the setup has completed correctly, you should be able to run:
+
+```
+PYTHONPATH=/path/to/cytocomp/python python3.6 -c 'import tellurium; import mtt'
+```
+
+If this command works you should be able to run Jupyter:
+
+```
+PYTHONPATH=/path/to/cytocomp/python python3.6 -m jupyter
+```
+
+and open any of the noteboks in `notebooks`.
 
 ## Design Documents
 
