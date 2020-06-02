@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "edae6857891e9d43da13ddad4a75f15874512958ab3e5068e2c2c532fc4c1844"
+            "sha256": "5059cb24c05112c2fbcc50aedccdae68b89f3fd69743aaca21bfa0e9b79f5092"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -198,22 +198,18 @@
         },
         "libroadrunner": {
             "hashes": [
-                "sha256:01ca910d821ff019baa2ff75eb581b411bdd33a2870c18ee3696fbb66d0d026d",
-                "sha256:11f131c2b2bf11270079b2be456b5fb7f520c25f16feb6a8fad55123f0cc1c1d",
-                "sha256:4bc42c67762845756e1d14276f01da4634d0e7a2bca4f3aba697383b1399b805",
-                "sha256:4f6133db3aa3d2250b2d6a6ea57f0650fb82226120b8ebff5150706a380a2f4a",
-                "sha256:8983c646159686689798aa25c1fb0f6ec746bbad1abbeb2f72b1eb970e80523e",
-                "sha256:92818119595f745367a1726010791c9c405aac2af8feda70265a3f2f26278477",
-                "sha256:9353146a642e9f3b91b4656d39b7697fe41e3a28bb244fa2f19f7a8dbf1142d5",
-                "sha256:9468d52c1bdf065caea1d7e65e6025fa6970e21387ba704b677c750660da6079",
-                "sha256:9b8e23dc92d1887f688d6bc2ce970265e3b12bce55b90a7cea8ccaf360b64549",
-                "sha256:9c26a2b3cdf21929ef012ab7bcaa43f6fe3adb733f982c0f49869c9b7e5a91a0",
-                "sha256:9e80ec299fe3250e07add5013c12bfadefb9b28041b515327a087eff71ee6785",
-                "sha256:e79e48ea72701c7a2235d33ca4e0e0f6cbbd2ad60244a3cba140817a7b4c28f0",
-                "sha256:fc22541742dc5b9ecf9403dc874ce92524223f7ebcd70edd5285ec367d264e2d"
+                "sha256:0108aa257b856d95b459880330414f547dc5a249a57b43a785846585be9c11c4",
+                "sha256:29895e08fe4ebcbce4816e972f1ed0d46a78a61cbc5c238a3004afeb8eaf3f2b",
+                "sha256:2ad84c9dec40368a9ec3fb1e259792f4970522b2b0fea85284f1603581f0fd26",
+                "sha256:63874ebc0272097016222dfb850e283dcca172fb09b10b6728ad72c8e4e0a7d1",
+                "sha256:7e254126def459a8ae443c6cafb234e4e4dbb346ebed77513b9a7759424a0d39",
+                "sha256:8c1a1c704041921440813e8f9d3922c34cd039d27929db4cdd929aa33be02947",
+                "sha256:c6eb1ee8966c0f070930c7b68896817adbe069bc6446e6fa043ccfbcce48a104",
+                "sha256:c74f75fd9c5e439ab70af162b3f37390c2c564df7554957c288e29f9f700795f",
+                "sha256:cebe0fe311471741c46d13a6b4898348e7b97c5b2f35d2f91d68730cd26b2d0e"
             ],
             "index": "pypi",
-            "version": "==1.4.24"
+            "version": "==1.4.23"
         },
         "markupsafe": {
             "hashes": [
@@ -281,6 +277,15 @@
             ],
             "index": "pypi",
             "version": "==8.2.0"
+        },
+        "nose": {
+            "hashes": [
+                "sha256:9ff7c6cc443f8c51994b34a667bbcf45afd6d945be7477b52e97516fd17c53ac",
+                "sha256:dadcddc0aefbf99eea214e0f1232b94f2fa9bd98fa8353711dacb112bfcbbb2a",
+                "sha256:f1bffef9cbc82628f6e7d7b40d7e255aefaa1adb6a1b1d26c69a8b79e6208a98"
+            ],
+            "index": "pypi",
+            "version": "==1.3.7"
         },
         "numpy": {
             "hashes": [
@@ -425,6 +430,14 @@
             "index": "pypi",
             "version": "==1.8.1"
         },
+        "py4j": {
+            "hashes": [
+                "sha256:36ec57f43ff8ced260a18aa9a4e46c3500a730cac8860e259cbaa546c2b9db2f",
+                "sha256:859ba728a7bb43e9c2bf058832759fb97a598bb28cc12f34f5fc4abdec08ede6"
+            ],
+            "index": "pypi",
+            "version": "==0.10.9"
+        },
         "pygments": {
             "hashes": [
                 "sha256:647344a061c249a3b74e230c739f434d7ea4d8b1d5f3721bc0f3558049b38f44",
@@ -529,10 +542,10 @@
         },
         "rrplugins": {
             "hashes": [
-                "sha256:9c6e9d39539ad864d19b6b5cea4be83af7fff1e636130af34294924dbf98d60b"
+                "sha256:0cb30f2688be9d6e0fdd0a9f831a35e8643c1a5a2751ec01f635d65d03db1cc7"
             ],
             "index": "pypi",
-            "version": "==1.2.2"
+            "version": "==1.1.10"
         },
         "sbml2matlab": {
             "hashes": [
@@ -615,10 +628,10 @@
         },
         "tellurium": {
             "hashes": [
-                "sha256:a5d18f980be6ff9ff45468f82577ea9ea2d804ba969a86717a959868d24134e1"
+                "sha256:b79d480548a798cee1fe7b61678b02dda5edf89d9ffdb77266c3a1f33cec6e89"
             ],
             "index": "pypi",
-            "version": "==2.0.18"
+            "version": "==2.0.5"
         },
         "tenuml": {
             "hashes": [
