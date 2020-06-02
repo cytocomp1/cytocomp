@@ -76,7 +76,7 @@ PYTHONPATH=/path/to/cytocomp/python python3.6 -m jupyter
 
 and open any of the noteboks in `notebooks`.
 
-## Design Documents
+## Misc. Design Documents
 
 A design plan is available [here](https://docs.google.com/document/d/1Di-Arw7D3oA38utko94PaDOYi06F3X9ToWq-YKgw0DQ/edit?usp=sharing).
 
