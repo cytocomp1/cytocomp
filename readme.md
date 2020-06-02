@@ -10,7 +10,11 @@ First install `sbt` and ensure you have it on your path. Compile the project wit
 sbt compile
 ```
 
-The cytomorphic compiler can be used either from the command line or as a [Py4J server](https://www.py4j.org/) (and can thus be called from Python inside Jupyter notebooks, see `notebooks`). To use the Py4J server mode:
+The cytomorphic compiler can be used either from the command line or as a [Py4J server](https://www.py4j.org/) (and can thus be called from Python inside Jupyter notebooks, see `notebooks`). 
+
+### Recommended Approach: Working with Jupyter Notebooks using Py4J
+
+To use the Py4J server mode, first run the above `sbt compile` command, then run:
 
 ```
 sbt ~run server
@@ -18,13 +22,43 @@ sbt ~run server
 
 See the `notebooks` directory for examples for how to use the compiler's API.
 
-## Model input via Antimony
+:warning: Some shells treat (e.g. zsh) the tilde `~` as a special character. In this case run:
 
-[Antimony](https://sourceforge.net/projects/antimony/) is a short-hand language for SBML. The cytomorphic compiler can accept Antimony as input instead of SBML provided that you have the `antimony` Python module install and that it is in your PYTHONPATH (in other words, running `python3 -c 'import antimony` in the terminal should produce no errors). Additionally, some notebook examples require [Tellurium](https://www.github.com/sys-bio/tellurium). These have been tested on Python 3.6 and can be installed with the `requirements.txt` file in this repository:
+```
+sbt \~run server
+```
+
+In order to run the included notebook examples, the `tellurium` environment is required, as described below.
+
+### Model input via Antimony
+
+[Antimony](https://sourceforge.net/projects/antimony/) is a short-hand language for SBML. The cytomorphic compiler can accept Antimony as input instead of SBML provided that you have the `antimony` Python module installed and that it is on the path that Python searches for modules (in other words, running `python3 -c 'import antimony` in the terminal should produce no errors). Additionally, some notebook examples require [Tellurium](https://www.github.com/sys-bio/tellurium). These have been tested only on Python 3.6. You can install both Tellurium and Antimony by simply using the `requirements.txt` file in this repository:
+
+#### Install Antimony / Tellurium using requirements.txt
 
 ```
 pip install -r requirements.txt
 ```
+
+:warning: These notebooks have only been tested with Python 3.6. You can obtain Python 3.6 through `conda`, via the [python.org](https://www.python.org/) website on most platforms, or by building from source.
+
+Alternatively, you can use pipenv.
+
+#### Install Antimony / Tellurium using pipenv
+
+Run:
+
+```
+pipenv install
+```
+
+Then, before running the server, run:
+
+```
+pipenv shell
+```
+
+For more information on how to use Pipenv, see the [Pipenv homepage](https://pipenv.pypa.io/en/latest/).
 
 ## Design Documents
 
