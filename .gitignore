@@ -12,3 +12,4 @@ mtt-completion.bash
 *.tmp
 notebooks/motifs/*.pdf
 default.profraw
+/project
