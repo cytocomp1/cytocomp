@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/263393844.svg)](https://zenodo.org/badge/latestdoi/263393844)
+
 # Introduction
 
 This repository contains a compiler for cytomorphic chips developed by the Sarpeshlar lab at Dartmouth. This compiler essentially converts Systems Biology Markup Language (SBML) into a hardware configuration, similar to VLSI technologies for digital hardware.
